@@ -1,17 +1,40 @@
 <template>
     <el-container class="main">
         <el-header style="height: 60px; line-height: 60px; text-align: left; background-color: #323a45; color: #fff; position: relative;">
-            <strong class="web_title"> 
-                <pg-icon style="vertical-align: top; color: #fff;font-size:24px;" icon="dianshangzhongxin"></pg-icon>
-                {{sysName}}
-            </strong>
-            <div class="logout">
-                <pg-icon style="vertical-align: top; color: #fff;font-size:18px;" icon="morentouxiang"></pg-icon>
-                {{userName}}
-                <span>欢迎回来!</span>
-                <pg-icon @click="exit()" style="vertical-align: top; color: #fff;font-size:18px;" icon="shishixiaoshou"></pg-icon>
-                <span @click="exit()">退出</span>
-            </div>
+            <el-row :gutter="20">
+                <el-col :span="6">
+                    <strong class="web_title"> 
+                        <pg-icon style="vertical-align: top; color: #fff;font-size:24px;" icon="dianshangzhongxin"></pg-icon>
+                        {{sysName}}
+                    </strong>
+                </el-col>
+                <el-col :span="12">
+                 <el-menu 
+                    :default-active="$route.path" 
+                    router
+                    background-color="rgb(50, 58, 69)"
+                    text-color="#fff"
+                    active-text-color="#ffd04b"
+                    mode="horizontal"
+                    style="height: 100%; border: none;margin:0 auto;">
+                    <el-submenu :index="'index' + (menuIndex + 1)" v-for="(menu, menuIndex) in menuList" :key="menuIndex">
+                        <template slot="title">
+                            <pg-icon style="vertical-align: top; color: #d7b791;" :icon="menu.iconCls"></pg-icon>
+                            {{ menu.name }}
+                        </template>
+                    </el-submenu>
+                </el-menu>                   
+                </el-col>
+                <el-col :span="6">
+                    <div class="logout">
+                        <pg-icon style="vertical-align: top; color: #fff;font-size:18px;" icon="morentouxiang"></pg-icon>
+                        {{userName}}
+                        <span>欢迎回来!</span>
+                        <pg-icon @click="exit()" style="vertical-align: top; color: #fff;font-size:18px;" icon="shishixiaoshou"></pg-icon>
+                        <span @click="exit()">退出</span>
+                    </div>                    
+                </el-col>
+            </el-row>
         </el-header>
         <el-container style="height: 100%;">
             <el-aside width="250px" style="background-color: #333; box-sizing: border-box;">
@@ -89,7 +112,7 @@
         }
     }
     .logout {
-        float: right;
+        text-align: right;
         span {
             color: #fff;
             padding:0 5px;
