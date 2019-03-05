@@ -9,27 +9,27 @@ import Swiper from 'views/swiper/index.vue'
 export default [
     {
         path: '/',
-        name: '商城',
+        name: 'Main',
         component: Main,
         children: [
             {
                 path: '/home',
-                name: '首页',
+                name: 'Home',
                 component: Home
             },
             {
                 path: '/list',
-                name: '首页',
+                name: 'List',
                 component: List
             },
             {
                 path: '/shop',
-                name: '首页',
+                name: 'Shop',
                 component: Shop
             },
             {
                 path: '/shopVuex',
-                name: '首页',
+                name: 'ShopVuex',
                 component: ShopVuex
             },
             {
@@ -39,12 +39,12 @@ export default [
             },
             {
                 path: '/echarts',
-                name: '首页',
+                name: 'Echarts',
                 component: Echarts
             },
             {
                 path: '/swiper',
-                name: '首页',
+                name: 'Swiper',
                 component: Swiper
             },
         ]

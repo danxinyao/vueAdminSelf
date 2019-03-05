@@ -8,7 +8,7 @@ export default [
     ...Login,
     {
         path: '/main',
-        name: 'main',
+        name: 'Main',
         component: Main,
         meta: {
             title: '管理系统',

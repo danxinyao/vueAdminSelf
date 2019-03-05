@@ -13,9 +13,27 @@
             </div>
         </div>
     </div>
+    <div class="share">
+        <share :config="config"></share>
+        <vshare
+  :vshareConfig="vshareConfig"
+>
+</vshare>
+    </div>
+
   </div>
 </template>
 <style rel="stylesheet/less" lang="less" scoped>
+    .share {
+        float: right;
+        font-size: 12px;
+        color: #999;
+        line-height:36px;
+        vertical-align: middle;
+        .social-share { 
+            display: inline-block;
+        }
+    }
     .content {
         .list {
             display: block;

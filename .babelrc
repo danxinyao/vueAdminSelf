@@ -8,7 +8,14 @@
     "plugins": [
         "syntax-dynamic-import", 
         "transform-runtime", 
-        "transform-vue-jsx"
+        "transform-vue-jsx",
+        [
+            "component", [
+                {
+                    "libraryName": "element-ui"
+                }
+            ]
+        ]
     ],
     "comments": false
 }

@@ -66,7 +66,10 @@ var devtool = false,   // 是否开启source-map
     devServer = {}   // 代理设置
 if (production) {
     console.log('压缩ing...')
-    devtool = '#source-map';
+    //devtool = '#source-map';
+    //devtool = '#cheap-module-eval-source-map'//在大多数情况下，cheap-module-eval-source-map 是最好的选择。
+    //devtool = '#eval' //很小  具有最好的性能，但并不能帮助你转译代码。
+    devtool = '#cheap-source-map' //如果你能接受稍差一些的 mapping 质量，可以使用 cheap-source-map 选项来提高性能
     devServer = {}   // 代理为空
     plugins.push(new webpack.optimize.UglifyJsPlugin({
         beautify: false,
@@ -101,13 +104,15 @@ if (production) {
 module.exports = {
     entry: {
         common: ['vue', 'vue-router','vuex','vuex-router-sync'],
-        build: './src/main.js'
+        build: './src/main.js',
+        //productionSourceMap: false,
     },
     output: {
         path: path.join(__dirname, buildFolder),
         publicPath: '/' + buildFolder + '/',
         filename: production ? '[name].[chunkhash].js' : '[name].js' //"build.[hash].js"//[hash]MD5戳   解决html的资源的定位可以使用 webpack提供的HtmlWebpackPlugin插件来解决这个问题  见：http://segmentfault.com/a/1190000003499526 资源路径切换
     },
+
     plugins: plugins,
     devtool: devtool,
     devServer: devServer,
