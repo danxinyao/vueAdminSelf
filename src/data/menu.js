@@ -6,49 +6,54 @@ export const menuList = [
         "children": [
             {
                 "path": "/home",
-                "name": "首页装修",
+                "name": "首页",
                 "iconCls": ""
             },
             {
                 "path": "/list",
-                "name": "页面管理",
+                "name": "后台列表",
                 "iconCls": ""
             },
             {
-                "path": "/Shop",
-                "name": "积分设置",
+                "path": "/shop",
+                "name": "商城",
                 "iconCls": ""
             },
             {
-                "path": "/Echarts",
-                "name": "交易设置",
+                "path": "/shopVuex",
+                "name": "商城-vuex",
                 "iconCls": ""
             }
         ]
     },
     {
         "path": "/",
-        "name": "商品",
+        "name": "插件",
         "iconCls": "dianshangzhongxin",
         "children": [
             {
-                "path": "/courseCenter",
-                "name": "课程中心",
+                "path": "/echarts",
+                "name": "图表",
                 "iconCls": ""
             },
             {
-                "path": "/courseColumn",
-                "name": "课程栏目",
+                "path": "/swiper",
+                "name": "轮播图",
                 "iconCls": ""
             },
             {
-                "path": "/courseIcon",
-                "name": "课程标签",
+                "path": "/color",
+                "name": "音乐",
                 "iconCls": ""
             },
             {
-                "path": "/courseComment",
-                "name": "课程评论",
+                "path": "/editor",
+                "name": "富文本",
+                "iconCls": ""
+            }, 
+            {
+                "path": "/wangEditor",
+                "name": "富文本-wangEditor",
                 "iconCls": ""
             },                         
         ]

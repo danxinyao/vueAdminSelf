@@ -6,6 +6,9 @@ import ShopVuex from 'views/shopVuex/index.vue'
 import Detail from 'views/detail/index.vue'
 import Echarts from 'views/echarts/index.vue'
 import Swiper from 'views/swiper/index.vue'
+import Color from 'views/color/index.vue' //颜色选择器
+import Editor from 'views/editor/index.vue' //富文本编辑器
+import WangEditor from 'views/wangEditor/index.vue' //富文本编辑器WangEditor
 export default [
     {
         path: '/',
@@ -47,6 +50,23 @@ export default [
                 name: 'Swiper',
                 component: Swiper
             },
+            {
+                path: '/color',
+                name: '颜色选择器',
+                component: Color
+            },
+            {
+                path: '/editor',
+                name: '富文本编辑器',
+                component: Editor
+            },
+            {
+                path: '/wangEditor',
+                name: '富文本编辑器-wangEditor',
+                component: WangEditor
+            },
+            
+            
         ]
     }
 ]
