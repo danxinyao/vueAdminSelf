@@ -98,6 +98,7 @@ if (production) {
             '/Export/*': proxyApi,
             '/Upload/*': proxyApi
         },
+        /*disableHostCheck: true,*/
     }    
 }
 

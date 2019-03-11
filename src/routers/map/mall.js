@@ -9,6 +9,8 @@ import Swiper from 'views/swiper/index.vue'
 import Color from 'views/color/index.vue' //颜色选择器
 import Editor from 'views/editor/index.vue' //富文本编辑器
 import WangEditor from 'views/wangEditor/index.vue' //富文本编辑器WangEditor
+import GdMap from 'views/gdMap/index.vue' //高德地图
+import BdMap from 'views/bdMap/index.vue' //百度地图
 export default [
     {
         path: '/',
@@ -65,7 +67,16 @@ export default [
                 name: '富文本编辑器-wangEditor',
                 component: WangEditor
             },
-            
+            {
+                path: '/gdMap',
+                name: '高德地图',
+                component: GdMap
+            },
+            {
+                path: '/bdMap',
+                name: '百度地图',
+                component: BdMap
+            },            
             
         ]
     }

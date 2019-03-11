@@ -8,7 +8,7 @@
                 </el-form-item>
                 <el-form-item label="价格排序">
                     <el-select v-model="query.condition.isDesc" placeholder="价格排序">
-                        <el-option v-for="item in options" :label="item.label" :value="item.value"></el-option>
+                        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item style="margin-left: 50px;">

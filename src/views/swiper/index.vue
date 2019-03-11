@@ -3,7 +3,7 @@
     <h2 class="title">我轮播图 </h2>
     <div class="echarts" id='bar'>
       <swiper :options="swiperOption">
-        <swiper-slide v-for="slide in swiperSlides">I'm Slide {{ slide }}</swiper-slide>
+        <swiper-slide :key="slide" v-for="slide in swiperSlides">I'm Slide {{ slide }}</swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>

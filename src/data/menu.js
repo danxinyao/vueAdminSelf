@@ -60,17 +60,17 @@ export const menuList = [
     },
     {
         "path": "/",
-        "name": "订单",
+        "name": "地图",
         "iconCls": "",
         "children": [
             {
-                "path": "/sysAccount",
-                "name": "账号管理",
+                "path": "/gdMap",
+                "name": "高德地图",
                 "iconCls": ""
             },
             {
-                "path": "/role",
-                "name": "权限管理",
+                "path": "/BdMap",
+                "name": "百度地图",
                 "iconCls": ""
             }
         ]

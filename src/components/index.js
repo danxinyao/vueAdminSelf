@@ -6,6 +6,8 @@ import img from './img/index.vue'//图片
 import pagination from './pagination/index.vue'//分页
 import editor from './editor/index.vue'//富文本编辑器
 import wangEditor from './wangEditor/index.vue'//wangEditor富文本编辑器
+import gdMap from './gdMap/index.vue'//高德地图
+import txMap from './txMap/index.vue'//腾讯地图
 
 
 const install = function (Vue) {
@@ -17,6 +19,8 @@ const install = function (Vue) {
     Vue.component(pagination.name, pagination)
     Vue.component(editor.name, editor)
     Vue.component(wangEditor.name, wangEditor)
+    Vue.component(gdMap.name, gdMap)
+    Vue.component(txMap.name, txMap)
 }
 
 export default install
