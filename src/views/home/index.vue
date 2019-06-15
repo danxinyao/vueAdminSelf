@@ -14,6 +14,15 @@
             <img src="~assets/images/logo.png" alt="">
     </div>
             <router-link :to="{ path: '/list'}" class="icon iconfont icon-icon_zhengquetishi">去list</router-link>
+                    <!-- 搜索 -->
+            <pg-search-form
+                v-model="query"
+                :default-form="defaultQuery"
+                :more="moreQuery"
+                :is-show-more="isShowMoreQuery"
+                @openMore="toggleOpen"
+                @search="search">
+            </pg-search-form>
     </pg-content>
 </template>
 <style rel="stylesheet/less" lang="less" scoped>

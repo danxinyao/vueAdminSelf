@@ -5,6 +5,7 @@ import routes from './routers'
 import store from './vuex'
 import actions from './vuex/actions'
 import Component from './components' // 全局组件
+import * as util from './util/common'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import ElementUI from 'element-ui'
 import Share from 'vue-social-share'
@@ -27,6 +28,7 @@ Vue.use(VueAwesomeSwiper)
 Vue.use(ElementUI)
 Vue.use(Share)
 Vue.use(vshare)
+Vue.prototype.util = util
 
 // 路由实例
 const router = new VueRouter({

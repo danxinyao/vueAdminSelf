@@ -8,6 +8,7 @@ import editor from './editor/index.vue'//富文本编辑器
 import wangEditor from './wangEditor/index.vue'//wangEditor富文本编辑器
 import gdMap from './gdMap/index.vue'//高德地图
 import txMap from './txMap/index.vue'//腾讯地图
+import search from './search/index'
 
 
 const install = function (Vue) {
@@ -21,6 +22,7 @@ const install = function (Vue) {
     Vue.component(wangEditor.name, wangEditor)
     Vue.component(gdMap.name, gdMap)
     Vue.component(txMap.name, txMap)
+    Vue.component(search.name, search)
 }
 
 export default install
