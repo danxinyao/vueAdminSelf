@@ -14,6 +14,8 @@ export default {
                 muted: true,
                 language: 'en',
                 playbackRates: [0.7, 1.0, 1.5, 2.0],
+                //width: document.documentElement.clientWidth,
+                //height: document.documentElement.clientHeight,
                 sources: [{
                     type: "video/mp4",
                     src: "https://cdn.theguardian.tv/webM/2015/07/20/150716YesMen_synd_768k_vp8.webm"
